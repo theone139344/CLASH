@@ -11,6 +11,10 @@
 # DOMAIN-SUFFIX,difyai.com
 DOMAIN-SUFFIX,549.tv
 DOMAIN-SUFFIX,ollama.ai
+# NotebookLM APP指定
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-KEYWORD,notebooklm
+DOMAIN,generativelanguage.googleapis.com
 
 # Tracker 服务器通过代理加速
 DOMAIN-SUFFIX,tracker.openbittorrent.com
