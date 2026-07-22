@@ -1,24 +1,19 @@
-# IP段匹配
-# IP-CIDR,142.171.133.131/32,no-resolve
+# theone-Proxy.list — 自用国外/代理（RULE-SET → 国外自用 / Other AI 等）
+# 真源：https://github.com/WindShadow777/CLASH
+# 语法：Clash classical
+# 约定：与 theone-china.list 互斥；同一域名只应出现在一侧
 
-# 国外DNS
-# DOMAIN-SUFFIX,dns.google
-# DOMAIN-KEYWORD,.tmall.com
-
-# 其他网站
-# DOMAIN-SUFFIX,polymarket.com
-# DOMAIN-SUFFIX,groq.com
-# DOMAIN-SUFFIX,difyai.com
-DOMAIN-SUFFIX,549.tv
+# ---------- AI / 开发 ----------
 DOMAIN-SUFFIX,ollama.ai
-# NotebookLM APP指定
 DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN-KEYWORD,notebooklm
 DOMAIN,generativelanguage.googleapis.com
 
-# Tracker 服务器通过代理加速
+# ---------- 媒体 / 站点 ----------
+DOMAIN-SUFFIX,549.tv
+
+# ---------- BT Tracker（走代理加速）----------
 DOMAIN-SUFFIX,tracker.openbittorrent.com
 DOMAIN-SUFFIX,opentrackr.org
 DOMAIN-SUFFIX,publicbt.com
 DOMAIN-SUFFIX,bitspyder.xyz
-

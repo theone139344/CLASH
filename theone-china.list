@@ -1,52 +1,38 @@
-# IP段匹配
-# IP-CIDR,142.171.133.131/32,no-resolve
+# theone-china.list — 自用国内/直连（RULE-SET → 直连 / 国内自用）
+# 真源：https://github.com/WindShadow777/CLASH
+# 语法：Clash classical（DOMAIN / DOMAIN-SUFFIX / DOMAIN-KEYWORD / IP-CIDR / PROCESS-NAME）
+# 约定：优先 DOMAIN-SUFFIX；整棵自有域一条后缀即可，不必枚举子域
 
-# 国内DNS
-# DOMAIN-SUFFIX,dns.google
+# ---------- 自有域 / 家宽服务 ----------
+DOMAIN-SUFFIX,theone3339.top
+DOMAIN-SUFFIX,winrobot360.com
 
-
-
-# 其他网站
-# DOMAIN-SUFFIX,polymarket.com
-# DOMAIN-SUFFIX,groq.com
-# DOMAIN-SUFFIX,difyai.com
+# ---------- PT / 站点（直连）----------
 DOMAIN-KEYWORD,hdsky.me
 DOMAIN-KEYWORD,ptzone.xyz
-DOMAIN-SUFFIX,winrobot360.com
-DOMAIN-KEYWORD,theone3339.top
+
+# ---------- 金融 / 支付 / 指纹（直连）----------
 DOMAIN-SUFFIX,ccb.com
 DOMAIN-SUFFIX,95533.com
 DOMAIN-SUFFIX,ccbfin.com
 DOMAIN-SUFFIX,ccbintl.com
-# 可能用于金融工具  
-DOMAIN-SUFFIX,ccbft.com  
-# 银行常合作支付宝生物识别  
-DOMAIN-SUFFIX,alipay.com 
-# 云服务CDN  
-DOMAIN-SUFFIX,aliyun.com  
-# 通用指纹验证域
-DOMAIN-SUFFIX,faceid.com    
+DOMAIN-SUFFIX,ccbft.com
+DOMAIN-SUFFIX,alipay.com
+DOMAIN-SUFFIX,aliyun.com
+DOMAIN-SUFFIX,faceid.com
 
-# P2P 连接直连（避免代理）
-# 典型 Peer 节点
-DOMAIN-SUFFIX,peer.example.com
-# BitTorrent 节点
-DOMAIN-SUFFIX,p2p.bit torrent.com
-# uTorrent Tracker 节点
-DOMAIN-SUFFIX,utorrent.com
-
-  
-# qBittorrent 进程本地流量直连
-# 确保 qBittorrent 本地流量不被代理
-PROCESS-NAME,qbittorrent.exe
-
-# 向日葵远程可能使用的阿里云 IP 范围
-IP-CIDR,47.88.0.0/16,no-resolve
-IP-CIDR,106.11.0.0/16,no-resolve
-# ToDesk 相关节点
+# ---------- 远程桌面（直连）----------
 DOMAIN-SUFFIX,todesk.com
 DOMAIN-SUFFIX,todesk.net
-# 向日葵远程 (Sunlogin) 相关节点
 DOMAIN-SUFFIX,sunlogin.com
 DOMAIN-SUFFIX,sunlogin.oray.com
 DOMAIN-SUFFIX,sunloginapp.com
+# 向日葵常见云段（可按需再收紧）
+IP-CIDR,47.88.0.0/16,no-resolve
+IP-CIDR,106.11.0.0/16,no-resolve
+
+# ---------- 本机 BT 客户端进程直连 ----------
+PROCESS-NAME,qbittorrent.exe
+DOMAIN-SUFFIX,utorrent.com
+
+# 已移除无效示例：peer.example.com、p2p.bit torrent.com（含空格，不可用）
