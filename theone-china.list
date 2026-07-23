@@ -21,6 +21,10 @@ DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,aliyun.com
 DOMAIN-SUFFIX,faceid.com
 
+# ---------- 国内 AI / 编码 API（直连）----------
+# api.kimi.com / kimi.com 走家宽，避免默认 DST-PORT,443→其他→代理
+DOMAIN-SUFFIX,kimi.com
+
 # ---------- 远程桌面（直连）----------
 DOMAIN-SUFFIX,todesk.com
 DOMAIN-SUFFIX,todesk.net
